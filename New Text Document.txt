@@ -1,0 +1,305 @@
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice
+$ git init
+Initialized empty Git repository in G:/data science/Daily Notes/git practice/.git/
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main.py
+        sum.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (master)
+$ git config --global user.email
+jayashri.dhake98@gmail.com
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (master)
+$ git branch -M main
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git add main.py
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   main.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sum.py
+
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git commit -m "Main file add to repo"
+[main (root-commit) c0708be] Main file add to repo
+ 1 file changed, 13 insertions(+)
+ create mode 100644 main.py
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git log
+commit c0708bec05b4d0d23dba263fbb1d1fae2f2bf61e (HEAD -> main)
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:02 2022 +0530
+
+    Main file add to repo
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git add .
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git commit -m "sum file also add"
+[main 252e81c] sum file also add
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sum.py
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git log
+commit 252e81c73f9c266019153aac91f8d0dfcce645ef (HEAD -> main)
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:47 2022 +0530
+
+    sum file also add
+
+commit c0708bec05b4d0d23dba263fbb1d1fae2f2bf61e
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:02 2022 +0530
+
+    Main file add to repo
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git branch dev
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ add .
+bash: add: command not found
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git commit -m "file added to dev"
+On branch main
+nothing to commit, working tree clean
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git log
+commit 252e81c73f9c266019153aac91f8d0dfcce645ef (HEAD -> main, dev)
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:47 2022 +0530
+
+    sum file also add
+
+commit c0708bec05b4d0d23dba263fbb1d1fae2f2bf61e
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:02 2022 +0530
+
+    Main file add to repo
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git add .
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git commit -m "file add to dev branch"
+On branch dev
+nothing to commit, working tree clean
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git log
+commit 252e81c73f9c266019153aac91f8d0dfcce645ef (HEAD -> dev, main)
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:47 2022 +0530
+
+    sum file also add
+
+commit c0708bec05b4d0d23dba263fbb1d1fae2f2bf61e
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:02 2022 +0530
+
+    Main file add to repo
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        divide.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git add divide.py
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git commit -m "divide file add to dev branch"
+[dev 10bfbcc] divide file add to dev branch
+ 1 file changed, 3 insertions(+)
+ create mode 100644 divide.py
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git log
+commit 10bfbcc2915e9b22ea664849911f59a7e20e5fb4 (HEAD -> dev)
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:54:44 2022 +0530
+
+    divide file add to dev branch
+
+commit 252e81c73f9c266019153aac91f8d0dfcce645ef (main)
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:47 2022 +0530
+
+    sum file also add
+
+commit c0708bec05b4d0d23dba263fbb1d1fae2f2bf61e
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:02 2022 +0530
+
+    Main file add to repo
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git checkout main
+Switched to branch 'main'
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git chechout dev
+git: 'chechout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git checkout -b anuj/multiply
+Switched to a new branch 'anuj/multiply'
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (anuj/multiply)
+$ git status
+On branch anuj/multiply
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        multiply.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (anuj/multiply)
+$ git add multiply.py
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (anuj/multiply)
+$ git commit -m "file add in anuj branch"
+[anuj/multiply 6bf286f] file add in anuj branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 multiply.py
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (anuj/multiply)
+$ git checkout dev
+Switched to branch 'dev'
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git merge anuj/multiply
+Updating 10bfbcc..6bf286f
+Fast-forward
+ multiply.py | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 multiply.py
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git log
+commit 6bf286f2f824b8b544f2dd8a7a13535ec67a3e6c (HEAD -> dev, anuj/multiply)
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 15:01:53 2022 +0530
+
+    file add in anuj branch
+
+commit 10bfbcc2915e9b22ea664849911f59a7e20e5fb4
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:54:44 2022 +0530
+
+    divide file add to dev branch
+
+commit 252e81c73f9c266019153aac91f8d0dfcce645ef (main)
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:47 2022 +0530
+
+    sum file also add
+
+commit c0708bec05b4d0d23dba263fbb1d1fae2f2bf61e
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:02 2022 +0530
+
+    Main file add to repo
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (dev)
+$ git checkout main
+Switched to branch 'main'
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git merge dev
+Updating 252e81c..6bf286f
+Fast-forward
+ divide.py   | 3 +++
+ multiply.py | 0
+ 2 files changed, 3 insertions(+)
+ create mode 100644 divide.py
+ create mode 100644 multiply.py
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git log
+commit 6bf286f2f824b8b544f2dd8a7a13535ec67a3e6c (HEAD -> main, dev, anuj/multiply)
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 15:01:53 2022 +0530
+
+    file add in anuj branch
+
+commit 10bfbcc2915e9b22ea664849911f59a7e20e5fb4
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:54:44 2022 +0530
+
+    divide file add to dev branch
+
+commit 252e81c73f9c266019153aac91f8d0dfcce645ef
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:47 2022 +0530
+
+    sum file also add
+
+commit c0708bec05b4d0d23dba263fbb1d1fae2f2bf61e
+Author: Jayashri7003 <jayashri.dhake98@gmail.com>
+Date:   Tue Aug 30 14:43:02 2022 +0530
+
+    Main file add to repo
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+BA001AX@LAPTOP-J22FJ9OP MINGW64 /g/data science/Daily Notes/git practice (main)
+$
